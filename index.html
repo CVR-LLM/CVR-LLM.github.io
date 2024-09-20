@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Enhancing Advanced Visual Reasoning Ability of Large Language Models.">
+  <meta name="keywords" content="Visual Reasoning, Large Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhancing Advanced Visual Reasoning Ability of Large Language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/v2a.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Enhancing Advanced Visual Reasoning Ability of Large Language Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Zhiyuan Li,
+            <span class="author-block">
+              Dongnan Liu,
+            <span class="author-block">
+              Chaoyi Zhang,
+            </span>
+            <span class="author-block">
+              Heng Wang,
+            </span>
+            <span class="author-block">
+              Tengfei Xue,
+            </span>
+            <span class="author-block">
+              Weidong Cai,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">School of Computer Science,</span>
+            <span class="author-block">University of Sydney</span><br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="./static/v2a-mapper_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Github</span>
+                  </a>
+              </span>
+              Huggingface Link. -->
+              <!-- <span class="link-block">
+                <a href="https://"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Hugging Face</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link.
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser image -->
+<section class="hero teaser">
+  <div class="column has-text-centered">
+    <h2 class="subtitle has-text-centered">
+      CVR-LLM is to capitalize on VLMs' visual perception proficiency and LLMs' extensive reasoning capability.
+    </h2>
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" width="950" height="1100"
+                 class="interpolation-image"
+                 alt="CVR-LLM"/>
+    </div>
+  </div>
+</section>
+<!--/ teaser image -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Content. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Content</h2>
+        <div class="content has-text-justified">
+          <div class="toc" >
+          <ul>
+            <li>
+              <a href="#abstract">Abstract</a>
+            </li>
+            <li>
+              <a href="#dataset">Dataset</a>
+            </li>
+            <li>
+              <a href="#method">Method</a>
+            </li>
+            <li>
+              <a href="#result">Result</a>
+            </li>
+            <li>
+              <a href="#analysis">Analysis</a>
+            </li> 
+            <li>
+              <a href="#example">Examples</a>
+            </li> 
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="abstract">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in Vision-Language (VL) research have sparked new benchmarks for complex visual reasoning, 
+            challenging models' advanced reasoning ability. Traditional Vision-Language models (VLMs) perform well in visual
+            perception tasks while struggling with complex reasoning scenarios. Conversely, Large Language Models (LLMs) 
+            demonstrate robust text reasoning capabilities; however, they lack visual acuity. To bridge this gap, we propose 
+            <b>C</b>omplex <b>V</b>isual <b>R</b>easoning <b>L</b>arge <b>L</b>anguage <b>M</b>odels (<b>CVR-LLM</b>), 
+            capitalizing on VLMs' visual perception proficiency and LLMs' extensive reasoning capability. Unlike recent 
+            multimodal large language models (MLLMs) that require a projection layer, our approach transforms images into 
+            detailed, context-aware descriptions using an iterative self-refinement loop and leverages LLMs' text knowledge 
+            for accurate predictions without extra training. We also introduce a novel multi-modal in-context learning (ICL) 
+            methodology to enhance LLMs' contextual understanding and reasoning. Additionally, we introduce Chain-of-Comparison 
+            (CoC), a step-by-step comparison technique enabling contrasting various aspects of predictions. Our CVR-LLM presents 
+            the first comprehensive study across a wide array of complex visual reasoning tasks and achieves SOTA performance among all.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="dataset">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the effectiveness of our proposed method, we conduct a comprehensive test in complex visual reasoning areas. 
+            Our evaluation included WinoGAViL (4373 samples), Winoground (400 samples), Whoops (500 samples), VCR (2653 out of over 26k 
+            samples, selecting a random 10%), and NYCCC (528 samples), providing a broad assessment of our approach's capabilities.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <!-- Image-to-Audio Generation -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <img src="./static/images/dataset.png" width="900" height="1100"
+                 class="interpolation-image"
+                 alt="CVR-LLM"/>
+        </div>
+      </div>
+
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" id="method">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>Context-Aware Image Description.</b> Our CaID framework optimizes the process of 
+              creating context-aware image descriptions through a dual-loop self-refinement approach. 
+              Initially, it leverages task-specific details and LLM 
+              insights to craft precise image prompts. These initial prompts are designed to distill 
+              essential task-related information, guiding the captioner in producing descriptions 
+              that are not only cover image content but also deeply aligned with the task's requirements.
+              In the second loop, our approach is crafted to encapsulate essential task-related details 
+              as well as LLMs' feedback, enhancing description generation with LLMs' vast knowledge. 
+              Specifically, it merges initial descriptions with task specifics and CVR-ICL examples 
+              into a task-focused prompt, guiding LLMs to make more precise predictions. These predictions
+              are then treated as pseudo labels, asking LLMs to design further inquiries for deeper insights 
+              around them. 
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container is-max-desktop">
+        <!-- Image-to-Audio Generation -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="./static/images/method1.png" width="500" 
+                   class="interpolation-image"
+                   alt="CVR-LLM"/>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                <b>Complex Visual Reasoning ICL.</b> we propose the complex visual reasoning ICL, 
+                which aims to select in-context examples for LLMs by effectively integrating both 
+                text and multi-modal components. This dual analysis enables our LLM to more effectively 
+                select contextually relevant examples. ensuring a balanced integration of text and multi-modal 
+                insights for enhanced in-context learning.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container is-max-desktop">
+          <!-- Image-to-Audio Generation -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img src="./static/images/method2.png" width="700" 
+                     class="interpolation-image"
+                     alt="CVR-LLM"/>
+            </div>
+          </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="result">Result</h2>
+            <div class="content has-text-justified">
+              <p>
+                The comparison of our CVR-LLM with popular VLMs and MM LLMs on five complex visual 
+                reasoning tasks. Notably, MLLMs like LLaVA and MiniGPT4 exhibit limitations in handling 
+                tasks involving multiple images or computing image-text similarity scores, resulting in 
+                their performance being unavailable for tasks like WinoGAViL and Winoground.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="container is-max-desktop">
+          <!-- Image-to-Audio Generation -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img src="./static/images/results.png" width="1500" 
+                     class="interpolation-image"
+                     alt="CVR-LLM"/>
+            </div>
+          </div>
+        
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="analysis">Analysis</h2>
+              <div class="content has-text-justified">
+                <p>
+                  <b>Ablation Studies.</b>We examine the individual contributions of the components within our framework CVR-LLM(GPT4). 
+                  The experimental findings suggest that the CVR-ICL module significantly boosts the inference performance of LLMs 
+                  compared to using context-aware image descriptions alone, with the exception of the NYCCC dataset (It may be due to 
+                  NYCCC's focus on humor, where precise descriptions are more critical). This highlights the CVR-ICL module's effectiveness 
+                  in enhancing LLM capabilities across various tasks. In addition, our comprehensive method, CVR-LLM, which integrates 
+                  both context-aware descriptions and CVR-ICL, achieves a substantial enhancement in performance relative to the baseline.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container is-max-desktop">
+            <!-- Image-to-Audio Generation -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img src="./static/images/ablation.png" width="1500" 
+                       class="interpolation-image"
+                       alt="CVR-LLM"/>
+              </div>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                  <p>
+                    <b>Context-Aware Image Description vs General Image Caption.</b>we investigate CaID's impact at an abstract 
+                    level and design a novel method to quantitatively demonstrate the semantic gap between context-aware image 
+                    descriptions and general image captions. we use GPT4 to evaluate the relative effectiveness between two kinds 
+                    of expressions with the prompt: <b>"Evaluate the equivalence of the following two options for the task XXX. 
+                      Option A: XXX; Option B: XXX. Please return True if Option B is better than Option A in answering questions; 
+                      return False if the opposite is true; return Equal if they are the same for the question."</b>. The comparison
+                      result is shown as below.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container is-max-desktop">
+              <!-- Image-to-Audio Generation -->
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                  <img src="./static/images/CaID.png" width="500" 
+                         class="interpolation-image"
+                         alt="CVR-LLM"/>
+                </div>
+              </div>
+
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <div class="content has-text-justified">
+                    <p>
+                      <b>Complex Visual Reasoning ICL vs Other ICL.</b>The CVR-ICL is designed to optimize the selection 
+                      of in-context exemplars within a multi-modal environment, thereby enhancing the reasoning abilities 
+                      of LLMs. This innovative method is contrasted with three alternative configurations: Random In-Context 
+                      Learning (RICL), KATE, and Multi-modal Similar In-Context Learning (MMICL). To ensure a fair comparison, 
+                      we utilized general image captions across all models to test performance for eliminating the effect of 
+                      our context-aware image descriptions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="container is-max-desktop">
+                <!-- Image-to-Audio Generation -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-full-width">
+                    <img src="./static/images/CVR-ICL.png" width="600" 
+                           class="interpolation-image"
+                           alt="CVR-LLM"/>
+                  </div>
+                </div>
+        
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="example">Examples</h2>
+              <div class="content has-text-justified">
+                <p>
+                  To showcase our approach capabilities, we present qualitative results. It illustrates how LLMs 
+                  leverage contextual information to ask more relevant and insightful questions tailored the specific 
+                  tasks. For instance, when provided with an image of the chess piece, the LLMs might ask "What does 
+                  the chess piece look like?". Subsequently, the captioner model generates contextually appropriate 
+                  descriptions, such as "A chess piece that looks like a unicorn.". This synergy enhances the LLM's 
+                  decision-making process, making it more precise and context-aware.
+                </p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container is-max-desktop">
+            <!-- Image-to-Audio Generation -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img src="./static/images/cases.png" width="500" 
+                       class="interpolation-image"
+                       alt="CVR-LLM"/>
+              </div>
+            </div>
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{}
+        </code></pre>
+      </div>
+    </section>
+   
+</footer>
+
+</body>
+</html>
