@@ -1,5 +1,4 @@
 # CVR-LLM.github.io
-# V2A-Mapper
 
 This is the repository that contains source code for the [CVR-LLM website](https://CVR-LLM.github.io).
 
